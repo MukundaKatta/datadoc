@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "datadoc"
+version = "0.1.0"
+description = "Data Quality Auditor"
+authors = [{ name = "Mukunda Katta" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "pydantic>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+datadoc = "datadoc.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
